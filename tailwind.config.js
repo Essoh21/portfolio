@@ -26,7 +26,7 @@ export default {
         },
       },
       animation: {
-        'fad-anime': 'fade 4s ease-out 2s forwards  ',
+        'fad-anime': 'fade 3s ease-out 2s forwards  ',
       },
     },
   },
