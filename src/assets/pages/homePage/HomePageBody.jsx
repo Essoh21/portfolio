@@ -3,7 +3,9 @@ import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import Project from './Project';
+import Project from './projects/Project';
+import myWork from './projects/myWork';
+import images from './projects/images';
 
 const HomePageBody = () => {
   return (
@@ -25,7 +27,7 @@ const HomePageBody = () => {
             w-auto  m-0 "
           />
         </div>
-        <div className="  mt-6 md:mt-0 p-1 sm:p-2 mx-4 md:border-2 md:p-4 shadow-lg  box-border">
+        <div className="  mt-6  md:mt-0 p-1 sm:p-2 mx-4 md:border-2 md:p-4 shadow-lg  box-border">
           <h1
             className="m-0 p-0 font-Playfair-display 
            text-3xl xl:text-4xl text-black  text-center"
@@ -72,10 +74,11 @@ const HomePageBody = () => {
         >
           My work
         </h1>
-        <div className="full mt-4">
+        <div className="w-full mt-4 p-4">
           <Project
-            className="w-[20rem]"
-            title={'some project'}
+            imgSrc={myWork[0].imageSrc}
+            className="w-[60rem]"
+            title={myWork[0].title}
             description={'description of the project in hand '}
           />
         </div>
