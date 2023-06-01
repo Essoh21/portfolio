@@ -1,28 +1,49 @@
-import { propTypes } from 'prop-types';
 import { FaGithub } from 'react-icons/fa';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-const Project = ({ title, description, link, imgSrc }) => {
+const Project = ({ title, description, link, imgSrc, appLink }) => {
+  const openAppLink = (appLink, inNewPage = true) => {
+    window.open(
+      appLink,
+      `${inNewPage ? '_blank' : '_self'}`,
+      'noopener, noreferrer',
+    );
+  };
   return (
-    <Link to={link}>
-      <div className="w-full flex flex-col">
+    <Link to={link} rel="noopener noreferrer">
+      <div className=" max-w-[40rem] m-4 flex flex-col border shadow-lg">
         <div>
           <img
             src={imgSrc}
-            srcSet={`${imgSrc} 1.25x, ${imgSrc} 1.5x, ${imgSrc} 7.8x  `}
+            srcSet={`${imgSrc}`}
             alt={title}
-            className="max-w-[20rem] "
+            className="w-full "
           />
         </div>
-        <div className="flex flex-row justify-between ">
-          <h2 className="py-4">{title}</h2>{' '}
+        <div className="flex flex-row justify-between my-4 ">
+          <h2 className="text-lg text-black font-Playfair-display w-full text-center ">
+            {title}
+          </h2>{' '}
           <span className="flex flex-row gap-2">
             {' '}
-            <FaGithub size={25} /> <BsBoxArrowUpRight size={25} />{' '}
+            <FaGithub
+              size={20}
+              onClick={(e) => {
+                e.stopPropagation();
+                openAppLink(appLink, false);
+              }}
+            />{' '}
+            <BsBoxArrowUpRight
+              onClick={(e) => {
+                e.stopPropagation();
+                openAppLink(appLink);
+              }}
+              size={20}
+            />{' '}
           </span>
         </div>
-        <div className="py-4"> {description}</div>
+        <div className="py-4 w-full text-center"> {description}</div>
       </div>
     </Link>
   );

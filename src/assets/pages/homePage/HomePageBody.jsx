@@ -1,11 +1,10 @@
-import face from '../images/face.png';
+import face from '../images/facer.png';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Project from './projects/Project';
 import myWork from './projects/myWork';
-import images from './projects/images';
 
 const HomePageBody = () => {
   return (
@@ -23,7 +22,7 @@ const HomePageBody = () => {
           <img
             src={face}
             alt="Essohanam ALOU"
-            className="h-[20rem]  xs:h-[24rem] md:h-[28rem] 
+            className="h-[20rem]  xs:h-[24rem] md:h-[28rem] object-cover
             w-auto  m-0 "
           />
         </div>
@@ -74,13 +73,19 @@ const HomePageBody = () => {
         >
           My work
         </h1>
-        <div className="w-full mt-4 p-4">
-          <Project
-            imgSrc={myWork[0].imageSrc}
-            className="w-[60rem]"
-            title={myWork[0].title}
-            description={'description of the project in hand '}
-          />
+        <div className="w-full mt-4 px-8 flex items-center justify-between  flex-row flex-wrap">
+          {myWork.map((work) => {
+            return (
+              <Project
+                key={work.title}
+                imgSrc={work.imageSrc}
+                title={work.title}
+                link={work.link}
+                appLink={work.appGithubLink}
+                description={work.appDescription}
+              />
+            );
+          })}
         </div>
       </section>
     </main>
@@ -91,18 +96,12 @@ const ABOUT_Me = `Hi, I'm Essohanam, a
 passionate full-stack developer with a strong foundation in
 mathematics. I believe that the intersection of logic,
 problem-solving, and creativity is where the magic of coding
-happens. With a degree in Mathematics and my love for technology, I
-bring a unique perspective to the world of web development. I enjoy
-translating complex algorithms and mathematical concepts into
-elegant and efficient code. My analytical mindset and attention to
-detail allow me to approach challenges with a systematic approach,
-ensuring robust and scalable solutions. Throughout my career, I have
-gained expertise in a wide range of technologies and frameworks.
+happens.
 From building responsive and user-friendly front-end interfaces
 using HTML, CSS, and JavaScript, to designing and implementing
-robust back-end systems with Node.js, Python, and databases like SQL
+robust back-end systems with Node.js and databases like SQL
 and MongoDB, I thrive in full-stack development environments. I'm
-passionate about creating clean, maintainable, and efficient code. I
+passionate about creating clean, maintainable, accessible and efficient code. I
 prioritize writing modular and well-documented code that not only
 solves the immediate problem but also lays a solid foundation for
 future enhancements and collaborations. I constantly strive to stay
@@ -110,9 +109,7 @@ up-to-date with the latest industry trends and best practices,
 allowing me to deliver high-quality solutions that align with
 industry standards. Beyond coding, I enjoy collaborating with
 multidisciplinary teams, brainstorming ideas, and finding innovative
-solutions to complex problems. I thrive in dynamic and fast-paced
-environments where I can apply my problem-solving skills and
-contribute to the success of exciting projects. I'm always looking
+solutions to complex problems. I'm always looking
 for new opportunities to expand my skillset and work on impactful
 projects. Whether it's building intuitive user interfaces,
 optimizing database performance, or integrating APIs, I'm ready to
