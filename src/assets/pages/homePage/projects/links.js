@@ -14,6 +14,8 @@ const links = {
   memoryCardAppLink: 'https://essoh21.github.io/memory-card/',
   memoryCardGithubLink: 'https://github.com/Essoh21/memory-card',
   myGithubProfileLink: 'https://github.com/Essoh21',
+  myLinkedinLink: 'https://www.linkedin.com/in/essohanam-alou-4841b0125/',
+  myTwitterLink: 'https://twitter.com/EssohanamAlou',
 };
 
 export default links;

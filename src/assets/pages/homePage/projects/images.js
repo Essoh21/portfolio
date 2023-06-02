@@ -1,6 +1,7 @@
 import findHiddensOne from '../../images/findHiddensOne.png';
 import findHiddensTwo from '../../images/findHiddensTwo.png';
 import findHiddensThree from '../../images/findHiddensFour.png';
+import profile from '../../images/profile.png';
 
 import cvApp from '../../images/cv.png';
 import etchOne from '../../images/etch.png';
@@ -31,6 +32,7 @@ const images = {
   shoppingCartTwo,
   shoppingCartThree,
   memoryCard,
+  profile,
 };
 
 export default images;

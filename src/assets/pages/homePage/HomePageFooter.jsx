@@ -4,12 +4,12 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const HomePageFooter = () => {
   return (
-    <footer className="w-full m-0 flex flex-col gap-8 mt-8">
-      <section className="flex  p-4 flex-col gap-4 bg-sky-500 min-h-30rem w-full ">
+    <footer className="w-full md:bg-sky-500 md:flex-row m-0 flex flex-col  mt-8">
+      <section className="flex  p-4 flex-col justify-between bg-sky-500 min-h-[25rem] w-full ">
         <h1 className="font-Playfair-display w-full text-center text-4xl text-white">
           Contact me{' '}
         </h1>
-        <div className="flex flex-col gap-4 text-center">
+        <div className="h-full flex flex-col gap-8  text-center">
           <p className="text-white">
             Please Get in touch if you think I could help or you have an offer.
           </p>
@@ -43,8 +43,12 @@ const HomePageFooter = () => {
           </ul>
         </div>
       </section>
-      <div className="w-full ">
-        <img src="./images/face.png" alt="Essohanam Alou" className="w-full" />
+      <div className="w-full md:max-h-[25rem] md:my-8">
+        <img
+          src={images.profile}
+          alt="Essohanam Alou"
+          className="w-auto h-full"
+        />
       </div>
     </footer>
   );
