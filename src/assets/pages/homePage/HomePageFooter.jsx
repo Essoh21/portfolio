@@ -4,7 +4,10 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const HomePageFooter = () => {
   return (
-    <footer className="w-full md:bg-sky-500 md:flex-row m-0 flex flex-col  mt-8">
+    <footer
+      className="w-full md:bg-sky-500 md:flex-row 
+      md:justify-between m-0 flex flex-col  mt-8"
+    >
       <section className="flex  p-4 flex-col justify-between bg-sky-500 min-h-[25rem] w-full ">
         <h1 className="font-Playfair-display w-full text-center text-4xl text-white">
           Contact me{' '}

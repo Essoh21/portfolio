@@ -78,7 +78,7 @@ const HomePageBody = () => {
         >
           My work
         </h1>
-        <div className="w-full mt-4 px-8 flex items-center justify-between  flex-row flex-wrap">
+        <div className="w-full mt-4 px-8 md:px-14 lg:px-20 xl:px-32 flex items-center justify-between  flex-row flex-wrap">
           {myWork.map((work) => {
             return (
               <Project

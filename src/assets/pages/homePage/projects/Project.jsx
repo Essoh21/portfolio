@@ -12,7 +12,11 @@ const Project = ({ title, description, link, imgSrc, appLink }) => {
   };
   return (
     <Link to={link} rel="noopener noreferrer">
-      <div className=" max-w-[40rem] md:max-w-[20rem] m-4 flex flex-col border shadow-lg">
+      <div
+        className=" max-w-[40rem] md:max-w-[18rem] 
+      lg:max-w-[20rem] xl:max-w-[25rem]
+      m-4 flex flex-col border shadow-lg"
+      >
         <div>
           <img
             src={imgSrc}
